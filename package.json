@@ -1,0 +1,48 @@
+{
+  "name": "reu-plekhanov-point",
+  "version": "1.0.0",
+  "description": "\"plekhanov point\" project",
+  "main": "index.js",
+  "scripts": {
+    "start:server": "ts-node-dev --respawn src/index.ts",
+    "build:server": "tsc",
+    "lint:server": "eslint src/**/*.ts",
+    "lint-fix:server": "eslint src/**/*.ts --fix",
+    "start:client": "npm run start --prefix ./client",
+    "lint:client": "npm run lint --prefix ./client",
+    "lint-fix:client": "npm run lint-fix --prefix ./client",
+    "build:client": "npm build --prefix ./client"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint-fix:client && npm run lint-fix:server"
+    }
+  },
+  "author": "makashovivan <makashov.developer@gmail.com> && alexkior <alex.n.kior@gmail.com>",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/express": "^4.17.12",
+    "@types/ldapjs": "^1.0.10",
+    "@typescript-eslint/eslint-plugin": "^4.28.1",
+    "@typescript-eslint/parser": "^4.28.1",
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-typescript": "12.3.1",
+    "eslint-plugin-import": "2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-react": "^7.24.0",
+    "husky": "^4.3.8",
+    "ts-node": "^10.0.0",
+    "ts-node-dev": "^1.1.7",
+    "typescript": "^4.4.4"
+  },
+  "dependencies": {
+    "@types/jest": "^27.0.2",
+    "@types/node": "^16.11.2",
+    "@types/react": "^17.0.31",
+    "@types/react-dom": "^17.0.10",
+    "express": "^4.17.1",
+    "ldapjs": "^2.3.0",
+    "reflect-metadata": "^0.1.13",
+    "tsyringe": "^4.6.0"
+  }
+}

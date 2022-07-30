@@ -1,0 +1,35 @@
+
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+      "project": "./tsconfig.json",
+      "ecmaVersion": 2020,
+      "sourceType": "module"
+    },
+    "extends": [
+      "plugin:@typescript-eslint/eslint-recommended",
+      "plugin:@typescript-eslint/recommended",
+      "airbnb-typescript"
+    ],
+    "plugins": ["@typescript-eslint"],
+    "rules": {
+      "linebreak-style": 0,
+      "@typescript-eslint/dot-notation": "off",
+      "@typescript-eslint/no-implied-eval": "off",
+      "@typescript-eslint/no-throw-literal": "off",
+      "react/react-in-jsx-scope": "off",
+      "react/destructuring-assignment": "off",
+      "react/jsx-props-no-spreading": "off",
+      "no-underscore-dangle": "off"
+    },
+    "overrides": [
+      {
+        "files": ["**/*.ts?(x)"]
+      }
+    ],
+    "globals": {
+      "window": true,
+      "document": true
+    }
+  }

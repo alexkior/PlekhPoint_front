@@ -1,0 +1,16 @@
+.shared_windows_runners:
+  tags:
+    - shared
+    - windows
+    - windows-1809
+
+before_script:
+  - npm i
+
+stages:
+  - lint_check
+
+lint_check:
+  stage: lint_check
+  script:
+    - npm run lint
